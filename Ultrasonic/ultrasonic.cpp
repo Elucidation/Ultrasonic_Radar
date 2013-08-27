@@ -1,3 +1,8 @@
+/*
+  Ultrasonic.h - Library for getting ultrasonic sensor readings.
+  Created by Sameer Ansari, Aug 26, 2013.
+  Released into public domain.
+*/
 #include "Ultrasonic.h"
 #include "Arduino.h"
 
