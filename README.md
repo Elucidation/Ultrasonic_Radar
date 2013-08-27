@@ -2,6 +2,8 @@ Ultrasonic Radar scanning with hobby equipment
 ---
 Having a go at seeing how well an arduino, a servo, and 2 ultrasonic sensors can get at generating maps of the environment.
 This is for testing the viability of cheap localization using particle filters on pre-computed maps.
+![Layout](http://i.imgur.com/nGzrfhP.jpg)
+
 Even without a low-pass filter, the data is usable, here is a partial scan of the kitchen.
 ![Imgur](http://i.imgur.com/abyPgFH.png)
 ![Imgur](http://i.imgur.com/yHH4N0P.png)
