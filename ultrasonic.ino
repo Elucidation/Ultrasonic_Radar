@@ -47,32 +47,17 @@ unsigned long getDistance() {
   return t * 17 / 100;
 }
 
-void prettyprint(int distance_mm) {
-  if (distance_mm < 10) {
-    Serial.print(distance_mm);
-    Serial.println("mm");
-  } else if (distance_mm < 1000) {
-    Serial.print(distance_mm/10);
-    Serial.print('.');
-    Serial.print(distance_mm%10);
-    Serial.println("cm");
-  } else {
-    Serial.print(distance_mm/1000);
-    Serial.print('.');
-    Serial.print(distance_mm%1000);
-    Serial.println("m");
-  }
-}
-
 unsigned long prev = 0;
 void loop() {
   // Take an ultrasonic reading every second. Results in mm
   unsigned long dist = getDistance();
-  Serial.print(dist);
-  Serial.println(" mm");
-  // constrain distances above 4m (unreliable at that point)
-  dist = constrain(dist, 0, 4000);
-  prettyprint(dist);
   
+  // Low-pass filter it
+  dist = constrain(dist, 0, 4000);
+  signed long diff = (signed long)dist - (signed long)prev;
+  dist = (unsigned long)(prev + diff * 3 / 10);
+  prev = dist;
+  
+  Serial.println(dist);
   delay(10);
 }
