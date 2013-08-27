@@ -1,3 +1,8 @@
+/*
+  RadarOrientationControl.h - Library for getting sweeping radar servo back/forth for scanning.
+  Created by Sameer Ansari, Aug 26, 2013.
+  Released into public domain.
+*/
 #include "RadarOrientationControl.h"
 // Initialize servo and range it will travel.
 RadarOrientationControl::RadarOrientationControl(int servo_pin,
