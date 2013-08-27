@@ -1,3 +1,8 @@
+/*
+  ultrasonic.ino - Main Arduino code for running scanning loop.
+  Created by Sameer Ansari, Aug 26, 2013.
+  Released into public domain.
+*/
 #include <ultrasonic.h>
 #include <RadarOrientationControl.h>
 #include <Servo.h>
