@@ -1,4 +1,4 @@
-Ultrasonic Radar scanning with hobby equipment
+Ultrasonic 2D Radar Scanning with hobby equipment
 ---
 Having a go at seeing how well an arduino, a servo, and 2 ultrasonic sensors can get at generating maps of the environment.
 This is for testing the viability of cheap localization using particle filters on pre-computed maps.
